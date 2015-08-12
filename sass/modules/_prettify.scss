@@ -1,0 +1,18 @@
+@import '../variables';
+
+.prettyprint{
+  .pln { color: $text-color }  /* plain text */
+
+  .str { color: #4CAF50 }  /* string content */
+  .kwd { color: #F44336 }  /* a keyword */
+  .com { color: #F44336 }  /* a comment */
+  .typ { color: #9C27B0 }  /* a type name */
+  .lit { color: #009688 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #00BCD4 }
+  .tag { color: #3F51B5 }  /* a markup tag name */
+  .atn { color: #E91E63 }  /* a markup attribute name */
+  .atv { color: #2196F3 }  /* a markup attribute value */
+  .dec, .var { color: #00BCD4 }  /* a declaration; a variable name */
+  .fun { color: #FFC107 }  /* a function name */
+}

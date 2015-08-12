@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/BlogPosting">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="CSS, HTML5, Javascript" itemprop="keywords" />
+  <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700%7CRoboto+Mono" rel="stylesheet" />
+  <link rel="stylesheet" href="../build/css/main.css" />
+  <script src="../build/js/main.min.js"></script>
+  <title>maTEriAL single page</title>
+</head>
+<body>
+  <div id="container">
+    <div id="container__inner">
+      <header id="page__header" role="banner">
+        <div id="header__inner">
+          <h1 id="page__logo"><a href="./">unsweets.log</a></h1>
+          <h2 id="page__description">Front-end &amp; Android.</h2>
+          <nav role="navigation" id="header__nav">
+            <h3 class="nocontent">Contents</h3>
+            <ul>
+              <li id="nav__about"><a href="#"><span>About</span></a></li>
+              <li id="nav__archives"><a href="#"><span>Archives</span></a></li>
+              <li id="nav__feed"><a href="#"><span>Feed</span></a></li>
+              <li id="nav__twitter"><a href="#"><span>Twitter</span></a></li>
+              <li id="nav__github"><a href="#"><span>Github</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div id="page__contents">
+        <div id="contents__inner">
+          <main role="main">
+            <article class="contents__article single" itemprop="mainEntityOfPage">
+              <header class="article__header">
+                <h1 class="article__title" itemprop="name">article title</h1>
+                <ul class="article__header__meta">
+                  <li class="article__time">
+                    <time datetime="2015-06-14" itemprop="datePublished"><span class="time__day">14</span> <span class="time__month">June</span> <span class="time__year">2015</span></time>
+                  </li>
+                  <li class="article__category"><a href="#">Web</a></li>
+                </ul>
+              </header>
+              <div class="article__body" itemprop="articleBody text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sint quae neque sapiente odio quo soluta nostrum voluptas, facilis est! Perspiciatis nisi sapiente id maiores temporibus placeat, velit magnam perferendis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sint quae neque sapiente odio quo soluta nostrum voluptas, facilis est! Perspiciatis nisi sapiente id maiores temporibus placeat, velit magnam perferendis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sint quae neque sapiente odio quo soluta nostrum voluptas, facilis est! Perspiciatis nisi sapiente id maiores temporibus placeat, velit magnam perferendis!</p>
+                <hr />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sint quae neque sapiente odio quo soluta nostrum voluptas, facilis est! Perspiciatis nisi sapiente id maiores temporibus placeat, velit magnam perferendis!</p>
+                <!-- <h1>Heading 1</h1> -->
+                <section>
+                  <h2>Heading 2</h2>
+                  <h3>Heading 3</h3>
+                  <h4>Heading 4</h4>
+                  <h5>Heading 5</h5>
+                  <h6>Heading 6</h6>
+                </section>
+                <h2>next section</h2>
+                <p><a href="#">link</a></p>
+                <ol>
+                  <li>item 1</li>
+                  <li>item 2</li>
+                  <li>item 3</li>
+                  <li>item 4</li>
+                  <li>item 5</li>
+                </ol>
+                <ul>
+                  <li>unordered list</li>
+                  <li>unordered list</li>
+                  <li>unordered list</li>
+                  <li>unordered list</li>
+                  <li>unordered list</li>
+                </ul>
+                <pre><code>(function(window){
+    console.log("longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong Lorem ipsum");
+  }).call(this);</code></pre>
+                <figure>
+                  <img src="http://lorempixel.com/300/200" width="300" height="200" alt="Lorem ipsum" />
+                  <figcaption>Lorem ipsum</figcaption>
+                </figure>
+              </div>
+              <footer class="article__footer">
+                <ul class="article__footer__tags">
+                  <li><a href="#">HTML5</a></li>
+                  <li><a href="#">CSS3</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                </ul>
+                <ul class="article__footer__share">
+                  <li class="share__twitter"><a href="#">Twitter</a></li>
+                  <li class="share__facebook"><a href="#">Facebook</a></li>
+                  <li class="share__hatena"><a href="#">Hatena bookmark</a></li>
+                </ul>
+                <nav>
+                  <h2 class="nocontent">next/prev</h2>
+                  <ol class="article__footer__pager">
+                    <li class="next"><a href="#">next article</a></li>
+                    <li class="prev"><a href="#">prev article</a></li>
+                  </ol>
+                </nav>
+              </footer>
+              <section id="article__comments">
+                <h2 id="comments__title">Comments</h2>
+                <article class="article__comment" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+                  <footer class="comment__meta">
+                    <ul>
+                      <li class="comment__icon"><img src="http://lorempixel.com/64/64/people" width="64" height="64" alt="icon" itemprop="image"  /></li>
+                      <li class="comment__name"><h3 itemprop="name">Lorem</h3></li>
+                      <li class="comment__time"><time datetime="05:05" itemprop="datePublished">05:05</time></li>
+                    </ul>
+                  </footer>
+                  <div class="comment__body" itemprop="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolor libero, consequuntur, adipisci omnis illum non aliquid doloremque sequi ratione, itaque amet rem. Enim voluptates voluptatibus, labore sed nobis asperiores.
+                  </div>
+                </article>
+
+                <article class="article__comment" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+                  <footer class="comment__meta">
+                    <ul>
+                      <li class="comment__icon"><img src="http://lorempixel.com/64/64/people" width="64" height="64" alt="icon" itemprop="image" /></li>
+                      <li class="comment__name"><h3 itemprop="name">Lorem</h3></li>
+                      <li class="comment__time"><time datetime="03:41" itemprop="datePublished">03:41</time></li>
+                    </ul>
+                  </footer>
+                  <div class="comment__body" itemprop="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolor libero, consequuntur, adipisci omnis illum non aliquid doloremque sequi ratione, itaque amet rem. Enim voluptates voluptatibus, labore sed nobis asperiores.
+                  </div>
+                </article>
+
+                <h3 id="comments__form-title">Leave a comment</h3>
+                <form action="#" method="post" id="comment__form">
+                  <label>
+                    Name: <input type="text" name="name" />
+                  </label>
+                  <label>
+                    Email: <input type="email" name="email">
+                  </label>
+                  <label>
+                    Comment: <textarea name="comment" id="comment" cols="40" rows="6"></textarea>
+                  </label>
+                  <input type="submit" value="submit" />
+                </form>
+              </section>
+            </article>
+          </main>
+        </div>
+      </div>
+      <aside id="page__search">
+        <h2 class="nocontent">Search</h2>
+        <form role="search" action="#" method="get">
+          <input type="search" />
+          <input type="submit" value="Search" />            
+        </form>
+      </aside>
+      <aside id="page__sidebar" role="complementary">
+        <h2 class="nocontent">Other contents</h2>
+        <div id="sidebar__inner">
+          <section class="sidebar__widget">
+            <div class="widget__inner">
+              <h3 class="widget__title">Widget</h3>
+              <div class="widget__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, saepe porro veritatis! Molestias enim in repudiandae laudantium illum sequi voluptatem. Deserunt veritatis praesentium perspiciatis vero, mollitia non in voluptatibus minima.</div>
+            </div>
+          </section>
+          <section class="sidebar__widget widget__link-list">
+            <div class="widget__inner">
+              <h3 class="widget__title">link list</h3>
+              <div class="widget__body">
+                <ul>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </aside>
+      <footer id="page__footer" role="contentinfo">
+        <div id="footer__inner">
+          <p id="copyright">
+            © _X_y_z_.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

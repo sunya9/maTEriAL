@@ -1,0 +1,24 @@
+// color
+$body-background-color: #eceff1;
+$accent-color: #009688;
+$accent-color-dark: #00897b;
+$text-color: #666;
+$logo-text-color: #fff;
+$second-accent-color: #cfd8dc;
+$text-color-light: lighten($text-color, 20%);
+$text-color-dark: darken($text-color, 20%);
+
+// font
+$base-font-family: 'Noto Sans', Verdana, '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+
+// size
+$width-xl: 1280px;
+$width-lg: 1024px;
+$width-md: 768px;
+$width-sm: 568px;
+
+$gutter: 10px;
+$header-height: 300px;
+$column: 60px;
+$sidebar-inner-width: $column * 5;
+$contents-inner-width: 620px;
