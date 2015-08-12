@@ -1,23 +1,26 @@
 @mixin xl{
-  @media (min-width: $width-xl){
+  @media screen and (min-width: $width-xl){
     @content;
   }
 }
 
 @mixin lg{
-  @media (min-width: $width-lg){
+  @media screen and (min-width: $width-lg){
     @content;
   }
 }
 
 @mixin md{
-  @media (min-width: $width-md){
+  @media screen and (min-width: $width-md){
     @content;
   }
 }
 
 @mixin sm{
-  @media (max-width: $width-sm){
+  @media screen and (max-width: $width-sm){
+    @content;
+  }
+  @media screen and (max-device-width: 320px){
     @content;
   }
 }
