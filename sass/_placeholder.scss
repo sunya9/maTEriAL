@@ -22,8 +22,10 @@
 %border-link{
   display: inline-block;
   margin: .5em 0 .3em;
-  padding-bottom: .5em;
+  padding-bottom: .2em;
   position: relative;
+  border-bottom: #ccc 1px dotted;
+  bottom: -1px;
   &::after{
     position: absolute;
     left: 0;
@@ -32,13 +34,14 @@
     content: '';
     left: 50%;
     bottom: -1px;
-    border-bottom: 3px  solid #ccc;
+    border-bottom: 1px  solid #ccc;
     transition: all .2s ease, border-bottom-color .4s ease .3s;
   }
   &:hover::after{
     width: 100%;
     left: 0;
     border-bottom-color: #bbb;
+    border-bottom-width: 3px;
   }
 }
 

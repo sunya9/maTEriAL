@@ -17,6 +17,9 @@ body{
   line-height: 1.47;
   -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+  @include sm {
+    background-color: $accent-color;
+  }
 }
 
 a{
@@ -50,6 +53,9 @@ pre, code{
   background-color: $body-background-color;
   overflow: hidden;
   min-height: 100%;
+  @include sm {
+    min-height: initial;
+  }
   &::after{
     display: block;
     content: '';
@@ -102,6 +108,7 @@ pre, code{
     width: 100%;
     margin-left: 0;
     box-shadow: 2px 0 10px 0 #444;
+    padding: $gutter 0 0;
   }
   @at-root #header__inner{
     margin: $gutter;
@@ -118,6 +125,9 @@ pre, code{
   margin: 0;
   line-height: 1.5;
   word-break: break-all;
+  @include sm {
+    display: inline-block;
+  }
   a{
     border-bottom: 3px double;
     padding-bottom: .25em;
@@ -125,6 +135,10 @@ pre, code{
     text-shadow: 0 0 5px rgba(#fff, .3);
     color: #fff;
     transition: padding-bottom .2s ease-in-out, margin-top .2s ease-in-out, text-shadow .3s ease-in-out .2s;
+    @include sm {
+      padding-left: .3em;
+      padding-right: .3em;
+    }
     &[href]:hover{
       margin-top: -.1em;
       padding-bottom: .35em;
@@ -143,6 +157,7 @@ pre, code{
 #header__nav{
   @include sm {
     @include clearfix;
+    margin: 0 (-$gutter);
   }
   ul{
     margin: 30px;
@@ -157,6 +172,7 @@ pre, code{
       float: left;
       overflow: visible;
       margin: 0;
+      padding: 15px 0 20px;
     }
     &:hover li{
       opacity: .8;
@@ -239,7 +255,8 @@ pre, code{
   margin-top: 29px;
   @include sm {
     float: none;
-    margin: $gutter 0 $gutter * 3;
+    margin: 0 0 $gutter * 3;
+    background-color: $body-background-color;
   }
   @at-root #page__contents{
     padding-left: ($column + $gutter) * 1.5;
@@ -334,6 +351,13 @@ pre, code{
           top: 9px;
           left: -120px;
           margin: 0 $gutter * 2;
+          @include sm {
+            left: 0;
+            top: 0;
+            float: right;
+            position: relative;
+            margin: 30px 0;
+          }
           .time__day, .time__month, .time__year{
             display: block;
             text-align: center;
@@ -392,6 +416,10 @@ pre, code{
     ul, ol{
       margin-left: -4em;
       padding-left: 4em;
+      @include sm {
+        margin-left: 0;
+        padding-left: 2em;
+      }
     }
     hr{
       $size: 20px;
@@ -556,6 +584,7 @@ pre, code{
         right: 0;
         float: left;
         width: auto;
+        margin-bottom: 20px;
       }
       &::before{
         content: 'Share:';
@@ -567,7 +596,11 @@ pre, code{
         margin-left: -50%;
         display: block;
         @include sm {
-          content: none;
+          // content: none;
+          width: 100%;
+          position: relative;
+          margin-top: 0;
+          margin-bottom: 1em;
         }
       }
       li{
@@ -690,22 +723,24 @@ pre, code{
   }
 }
 
-.contents__search{
+.contents__search, .contents__archive{
   @extend .contents__article;
-  @at-root #search-results{
-    li{
-      margin: .5em 0;
-      a{
-        @extend %border-link;
+  .article__body{
+    .search-results, .archive-list{
+      list-style-type: none;
+      @include sm {
+        padding-left: 0;
       }
-      time{
-        @extend %time;
+      li{
+        margin: .2em 0;
+        a{
+          @extend %border-link;
+        }
+        time{
+          @extend %time;
+          display: inline-block;
+        }
       }
-    }
-  }
-  @at-root #archive-list{
-    li{
-      margin: .5em 0;
     }
   }
 }
@@ -736,11 +771,14 @@ pre, code{
 }
 
 #article__comments{
-  h2#comments__title{
+  @at-root #comments__title{
     text-transform: uppercase;
     margin: 2.5em 0 1em;
     color: $text-color-light;
     font-size: 1.5rem;
+    @include sm {
+      margin-top: 1em;
+    }
   }
   .comments__comments{
     padding-left: 0;
@@ -766,16 +804,24 @@ pre, code{
             margin-right: $gutter;
             margin-left: $offset;
             float: left;
+            @include sm {
+              margin-left: 0;
+            }
             img{
               border-radius: 50%;
               border: $border-width solid #fff;
             }
           }
           &.comment__name{
+            @include clearfix;
             h3{
+              float: left;
               font-size: 1.2rem;
               font-weight: normal;
               margin: 0;
+              @include sm {
+                padding-top: .3em;
+              }
             }
           }
           &.comment__time, &.comment__edit-link, &.comment__reply-link{
@@ -795,6 +841,9 @@ pre, code{
             }
           }
           &.comment__body{
+            @include sm {
+              clear: left;
+            }
           }
         }
       }
@@ -867,6 +916,7 @@ pre, code{
     width: 100%;
     padding: $gutter * 2 0;
     margin: 0;
+    box-shadow: -2px 0 10px 0 #444;
   }
   form{
     margin: 0 $gutter;
@@ -888,6 +938,8 @@ pre, code{
       box-sizing: border-box;
       transition: all .2s ease;
       position: relative;
+      -webkit-appearance: none;
+      border-radius: 0;
       &:focus, &:hover{
         border-bottom-color: #fff;
         color: #fff;
@@ -937,10 +989,9 @@ pre, code{
 }
 
 
-.sidebar__widget{
+.widget{
   color: #fcfcfc;
-  margin: $gutter;
-  .widget__title{
+  .widgettitle{
     text-transform: uppercase;
     font-size: 1.05rem;
     margin:$gutter 0 0;
@@ -948,24 +999,22 @@ pre, code{
   }
 }
 
-.widget__link-list{
-  .widget__body{
-    ul{
-      list-style-type: none;
-      padding-left: 0;
-      a{
-        display: block;
-        padding: .9em $gutter;
-        margin: 0 -10px;
-        border-radius: 1px;
-        &:hover{
-          background-color: rgba(lighten($accent-color, 5%), .8);
-          color: #fff;
-          text-shadow: 0 0 10px rgba(#fff, .8);
-        }
-        &:active{
-          background-color: rgba($accent-color-dark, 8);
-        }
+.widget_archive{
+  ul{
+    list-style-type: none;
+    padding-left: 0;
+    a{
+      display: block;
+      padding: .9em $gutter;
+      margin: 0 -10px;
+      border-radius: 1px;
+      &:hover{
+        background-color: rgba(lighten($accent-color, 5%), .8);
+        color: #fff;
+        text-shadow: 0 0 10px rgba(#fff, .8);
+      }
+      &:active{
+        background-color: rgba($accent-color-dark, 8);
       }
     }
   }

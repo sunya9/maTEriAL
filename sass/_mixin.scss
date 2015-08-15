@@ -1,21 +1,3 @@
-@mixin xl{
-  @media screen and (min-width: $width-xl){
-    @content;
-  }
-}
-
-@mixin lg{
-  @media screen and (min-width: $width-lg){
-    @content;
-  }
-}
-
-@mixin md{
-  @media screen and (min-width: $width-md){
-    @content;
-  }
-}
-
 @mixin sm{
   @media screen and (max-width: $width-sm){
     @content;
