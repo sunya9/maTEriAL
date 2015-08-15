@@ -41,7 +41,7 @@
         <ol itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
           <?php query_posts('offset=1'); ?>
           <?php if(have_posts()): while(have_posts()): the_post(); ?>
-          <li><a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><span itemprop="name"><?php the_title(); ?></span></a> <time datetime="<?php echo get_the_date('Y-m-d'); ?>" itemprop="datePublished"><?php echo get_post_time('d l Y'); ?></time></li>
+          <li><a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><span itemprop="name"><?php the_title(); ?></span></a> <time datetime="<?php echo get_the_date('Y-m-d'); ?>" itemprop="datePublished"><?php echo get_post_time('d M Y'); ?></time></li>
           <?php endwhile; endif; ?>
         </ol>
         <a href="<?php echo home_url(); ?>/archives" id="contents__archives-link">Archives</a>
