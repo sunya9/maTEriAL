@@ -14,7 +14,8 @@ body{
   background-color: $body-background-color;
   font-family: $base-font-family;
   color: $text-color;
-  line-height: 1.47;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
   @include sm {
