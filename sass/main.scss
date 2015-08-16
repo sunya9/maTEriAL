@@ -665,22 +665,29 @@ pre, code{
       $arrow-size: 10px;
       $offset: 120 - ($arrow-size + $gutter + $column) / 2 - $gutter / 2;
       list-style-type: none;
-      margin: 50px (-$offset);
+      margin: 80px (-$offset);
       padding: 0 $offset;
       display: table;
       width: 100%;
+      position: relative;
       @include sm {
         margin-bottom: 0;
       }
       li{
+        @extend %border-link;
         $hover-color: darken($second-accent-color, 10%);
         width: 50%;
-        position: relative;
         display: table-cell;
         vertical-align: middle;
+        &.empty{
+          border: none;
+          &::after{
+            content: none;
+          }
+        }
         &.next{
           a{
-            padding-right: 50px;
+            padding-right: 30px;
             &::before{
               border-right-color: $second-accent-color;
               left: -$offset;
@@ -692,7 +699,7 @@ pre, code{
         }
         &.prev{
           a{
-            padding-left: 50px;
+            padding-left: 30px;
             &::before{
               border-left-color: $second-accent-color;
               right: -$offset;
@@ -704,7 +711,9 @@ pre, code{
           text-align: right;
         }
         a{
-          @extend %border-link;
+          // @extend %border-link;
+          position: relative;
+          border-bottom: 0;
           padding: 1.5em 0;
           display: block;
           &::before{
