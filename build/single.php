@@ -39,10 +39,10 @@
           <nav>
             <h2 class="nocontent">next/prev</h2>
             <ol class="article__footer__pager">
-              <li class="next <?php if(get_adjacent_post(true, '', true)) echo 'empty'; ?>">
+              <li class="next <?php if(!get_adjacent_post(false, '', false)) echo 'empty'; ?>">
                 <?php next_post_link('%link'); ?>
               </li>
-              <li class="prev <?php if(get_adjacent_post(true, '', false)) echo 'empty'; ?>">
+              <li class="prev <?php if(!get_adjacent_post(false, '', true)) echo 'empty'; ?>">
                 <?php previous_post_link('%link'); ?>
               </li>
             </ol>
