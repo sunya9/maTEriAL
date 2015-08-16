@@ -1007,28 +1007,28 @@ pre, code{
     margin:$gutter 0 0;
     padding: 1rem 0 .5rem;
   }
-}
-
-.widget_archive{
-  ul{
-    list-style-type: none;
-    padding-left: 0;
-    a{
-      display: block;
-      padding: .9em $gutter;
-      margin: 0 -10px;
-      border-radius: 1px;
-      &:hover{
-        background-color: rgba(lighten($accent-color, 5%), .8);
-        color: #fff;
-        text-shadow: 0 0 10px rgba(#fff, .8);
-      }
-      &:active{
-        background-color: rgba($accent-color-dark, 8);
+  &.widget_archive, &.widget_recent_entries{
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+      a{
+        display: block;
+        padding: .9em $gutter;
+        margin: 0 -10px;
+        border-radius: 1px;
+        &:hover{
+          background-color: rgba(lighten($accent-color, 5%), .8);
+          color: #fff;
+          text-shadow: 0 0 10px rgba(#fff, .8);
+        }
+        &:active{
+          background-color: rgba($accent-color-dark, 8);
+        }
       }
     }
   }
 }
+
 
 #page__footer{
   float: left;
